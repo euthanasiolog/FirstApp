@@ -1,7 +1,9 @@
 package com.dev.piatr.firstapp.feature;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 /**
@@ -19,5 +21,11 @@ public class SecondActivity extends AppCompatActivity {
           textView.setText(message);
         }
         setContentView(textView);
+    }
+
+    public void back (View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
     }
 }
