@@ -1,1 +1,5 @@
-<resources></resources>
+<resources>
+
+    <string name="inputMessageString">ВВЕДИТЕ СООБЩЕНИЕ</string>
+    <string name="sendMessageButtonString">ОТПРАВИТЬ</string>
+</resources>
