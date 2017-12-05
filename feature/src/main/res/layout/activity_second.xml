@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/message"
         />
     <Button
         android:layout_width="wrap_content"
@@ -15,5 +17,6 @@
         android:text="@string/backButtonString"
         android:onClick="back"
         android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/message"
         />
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

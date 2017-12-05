@@ -14,13 +14,14 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
         Bundle extras = getIntent().getExtras();
-        TextView textView = new TextView(this);
+        TextView textView;
+        textView = findViewById(R.id.message);
         if(extras!=null){
           String message = extras.getString("message");
           textView.setText(message);
         }
-        setContentView(textView);
     }
 
     public void back (View view){
